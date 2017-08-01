@@ -1,16 +1,24 @@
 {
-  "name": "wk02demo",
+  "name": "ar.js",
   "version": "1.0.0",
-  "description": "basic node.js and ws setup",
-  "main": "server.js",
+  "description": "Efficient Augmented Reality for the Web",
+  "main": "three.js",
   "scripts": {
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Brendan Luu",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.15.3",
-    "http": "0.0.0",
-    "ws": "^3.0.0"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeromeetienne/AR.js.git"
+  },
+  "keywords": [
+    "AR",
+    "VR",
+    "three.js"
+  ],
+  "author": "jerome.etienne@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeromeetienne/AR.js/issues"
+  },
+  "homepage": "https://github.com/jeromeetienne/AR.js#readme"
 }

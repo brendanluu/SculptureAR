@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <title>DUVR Boilerplate - A-Frame</title>
+    <meta name="description" content="Drexel VR Club - A-Frame">
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.9.0/dist/aframe-extras.min.js"></script>
+
+  </head>
+  <body>
+
+    <a-scene>
+
+      <a-assets>
+        <a-asset-item id="assetAframe" src="models/scene.gltf"></a-asset-item>
+      </a-assets>
+
+      <a-entity gltf-model-next="src: url(models/scene.gltf);"></a-entity>
+
+      <a-sky color="red"></a-sky>
+    </a-scene>
+
+  </body>
+</html>

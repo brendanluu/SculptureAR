@@ -17,12 +17,10 @@
 	<!-- <a-scene artoolkit='sourceType: image; sourceUrl:../../data/images/screenshot.png'> -->
 	<!-- <a-scene embedded artoolkit='sourceType: image; sourceUrl:../../data/images/armchair.jpg;'> -->
 
-		<a-assets>
-			<a-asset-item id="assetAframe" src="models/scene.gltf"></a-asset-item>
-		</a-assets>
 
 		<!-- <a-marker type='unknown'> -->
-		<a-entity gltf-model-next="src: #assetAframe" rotation='-90 0 0'scale='0.02 0.02 0.02'></a-entity>
+		<a-entity gltf-model-next="src: url(models/scene.gltf);" rotation='-90 0 0'scale='0.02 0.02 0.02'></a-entity>
+
 
 
 		<a-marker-camera preset='hiro'></a-marker-camera>

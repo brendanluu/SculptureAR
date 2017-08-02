@@ -20,9 +20,5 @@
   "bugs": {
     "url": "https://github.com/jeromeetienne/AR.js/issues"
   },
-  "homepage": "https://github.com/jeromeetienne/AR.js#readme",
-  "dependencies": {
-    "express": "^4.15.2",
-    "socket.io": "^2.0.3"
-  }
+  "homepage": "https://github.com/jeromeetienne/AR.js#readme"
 }

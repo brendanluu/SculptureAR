@@ -10,7 +10,9 @@
 <!-- include aframe -->
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
 <!-- <script src="build/aframe-ar.js"></script> -->
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+	 <script src="easyrtc/easyrtc.js"></script>
+	 <script src="https://unpkg.com/networked-aframe/dist/networked-aframe.min.js"></script>
 <!-- to load .gltf model -->
 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.10.0/dist/aframe-extras.min.js"></script>
 <!-- orbit controls -->
@@ -58,11 +60,27 @@
     };
 </script>
 
+<script>
+      // Define custom schema for syncing avatar color, set by random-color
+      var avatarSchema = {
+        template: '#avatar-template',
+        components: [
+          'position',
+          'rotation',
+          {
+            selector: '.head',
+            component: 'material'
+          }
+        ]
+      };
+      NAF.schemas.add(avatarSchema);
+    </script>
+
 	</head>
 
   <body onload="initElement();">
 
-    <a-scene>
+    <a-scene networked-scene>
 
       <a-entity id="camera"
           camera="fov: 80; zoom: 1;"
@@ -85,7 +103,7 @@
 
 
 
-  <a-entity id="model" scale="1 1 1">
+  <a-entity id="model" scale="1 1 1" networked="template:#avatar-template;showLocalTemplate:false;">
 
 		<!-- <a-entity gltf-model-next="src: url(models/scene.gltf);" position='0 0 0' rotation='0 90 0' scale='20 20 20'></a-entity> -->
 		<a-entity id="sculpture" gltf-model-next="models/tiberius/scene.gltf" position="-1.111 -0.829 1.193" rotation="-14.954198452914486 0 0"></a-entity>
